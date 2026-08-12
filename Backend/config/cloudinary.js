@@ -18,6 +18,7 @@ const deleteFromCloudinary = async (public_id) => {
 
 module.exports = {
   cloudinary,
+ 
   deleteFromCloudinary,
  
 };

@@ -20,11 +20,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors({
-    origin: ["http://localhost:5173", process.env.FRONTEND_LINK],
+    origin: [
+        "http://localhost:5173",
+        "https://roupdarshan.com",
+        "https://www.roupdarshan.com"
+    ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"]
 }));
-
 db();
 
 app.use('/admin', adminRoutes);
